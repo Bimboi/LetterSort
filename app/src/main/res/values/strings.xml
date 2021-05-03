@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LetterSort</string>
+    <string name="action_about">About the Developer</string>
+    <string name="only_fragment_label">Only Fragment</string>
+
+    <string name="sort_label">SORT</string>
+    <string name="letter_limit_label"><i>Input at least 5 letters</i></string>
+    <string name="sorted_letters_label">Sorted letters here</string>
+    <string name="title_activity_about">About</string>
+    <string name="about_dev_label"><b>About the Developer</b></string>
+    <string name="author_name">Venz Dwight Kwan</string>
+</resources>
