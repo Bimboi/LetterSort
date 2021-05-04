@@ -5,7 +5,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "kwan.ics26011.lettersort"
+        applicationId "com.ICS26011.LetterSort"
         minSdkVersion 22
         targetSdkVersion 30
         versionCode 1

@@ -1,8 +1,13 @@
 package com.ICS26011.LetterSort;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -11,7 +16,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+
+import com.google.android.material.appbar.AppBarLayout;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -28,13 +37,17 @@ public class FirstFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_first, container, false);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        checkColorMode(view);
 
         final TextView input = view.findViewById(R.id.letter_input);
         final TextView sortText = view.findViewById(R.id.sorted);
         final Button sortButton = view.findViewById(R.id.button_sort);
 
+        // pressed letter is added on raw input to be sorted
         view.findViewById(R.id.letter_A).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -200,6 +213,7 @@ public class FirstFragment extends Fragment {
             }
         });
 
+        // give functions on sort button based on its state
         view.findViewById(R.id.button_sort).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -224,6 +238,8 @@ public class FirstFragment extends Fragment {
         }
     }
 
+    // checks if input reached the limit of 5 letters
+    // if not, user can still press a letter
     private boolean check(TextView rawInput){
         if (rawInput.getText().toString().replace(" ", "").length() == 5){
             return true;
@@ -232,10 +248,32 @@ public class FirstFragment extends Fragment {
         }
     }
 
+    // sorts the input by removing the space then use Arrays.sort
+    // change sort button text to reset
     private void sort(TextView rawInput, TextView sortText, Button sortButton){
         char[] charArray = rawInput.getText().toString().replace(" ", "").toCharArray();
         Arrays.sort(charArray);
         sortText.setText(new String(charArray).replace("", " "));
         sortButton.setText("RESET");
+    }
+
+    private void checkColorMode(View view){
+        ConstraintLayout fragmentFirst = view.findViewById(R.id.fragment_first);
+        TextView input = view.findViewById(R.id.letter_input);
+        TextView sorted = view.findViewById(R.id.sorted);
+
+        int colorSomewhatBlack = getResources().getColor(R.color.colorSomewhatBlack);
+        int colorWhite = getResources().getColor(R.color.colorWhite);
+
+        SharedPreferences prefs = requireActivity().getSharedPreferences("MY_PREFS", Context.MODE_PRIVATE);
+
+        if(Objects.equals(prefs.getString("mode", ""), "Black")){
+            fragmentFirst.setBackgroundColor(colorSomewhatBlack);
+            input.setBackgroundColor(colorSomewhatBlack);
+            input.setHintTextColor(colorWhite);
+            input.setTextColor(colorWhite);
+            sorted.setBackgroundColor(colorSomewhatBlack);
+            sorted.setTextColor(colorWhite);
+        }
     }
 }
