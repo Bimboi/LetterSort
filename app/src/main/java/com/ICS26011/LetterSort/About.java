@@ -10,8 +10,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.view.View;
 import android.widget.TextView;
 
-import com.google.android.material.appbar.AppBarLayout;
-
 import java.util.Objects;
 
 public class About extends AppCompatActivity {
