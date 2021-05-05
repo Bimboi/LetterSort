@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:backgroundTint="?android:attr/windowBackground"
-            app:menu="@menu/menu_main" />
+            app:menu="@menu/menu_main"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 

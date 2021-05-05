@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">LetterSort</string>
     <string name="action_about">About the Developer</string>
-    <string name="action_color_mode">Switch to Color Mode</string>
+    <string name="action_color_mode">Switch Color Mode</string>
     <string name="only_fragment_label">Only Fragment</string>
 
     <string name="sort_label">SORT</string>
