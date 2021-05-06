@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LetterSort</string>
+    <string name="app_name">Letter Sort</string>
     <string name="action_about">About the Developer</string>
     <string name="action_color_mode">Switch Color Mode</string>
     <string name="only_fragment_label">Only Fragment</string>
