@@ -8,6 +8,10 @@
     <string name="letter_limit_label"><i>Input at least 5 letters</i></string>
     <string name="sorted_letters_label">Sorted letters here</string>
     <string name="title_activity_about">About</string>
-    <string name="about_dev_label"><b>About the Developer</b></string>
+    <string name="about_dev_label"><b>From the Developer</b></string>
     <string name="author_name">Venz Dwight Kwan</string>
+    <string name="author_desc">I’m Venz Dwight Kwan, a third year student BSIT in university of Santo Tomas Manila.
+        I live in Bacoor, Cavite.\n\nI created this app for my 1st project in Applications Development And Emerging Technologies 3 (Mobile programming).
+        \n\nTo our beloved Professor Alma Perol thank you for sharing your knowledge to us your student we love you ma’am whahahahahaha"</string>
+    <string name="author_quote"><b>“Ang kaba ay nasa isip lamang,\nparang gutom lumilipas din”</b></string>
 </resources>

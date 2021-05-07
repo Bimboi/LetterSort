@@ -32,11 +32,7 @@ public class About extends AppCompatActivity {
 
         setColorMode();
 
-        String devDescription = "I’m Venz Dwight Kwan, a third year student BSIT in university of Santo Tomas Manila. " +
-                "I live in Bacoor, Cavite. I created this app for my 1st project in Applications Development And Emerging Technologies 3 (Mobile programming). " +
-                "To our beloved Professor Alma Perol thank you for sharing your knowledge to us your student we love you ma’am whahahahahaha";
         TextView desc = findViewById(R.id.dev_description);
-        desc.setText(devDescription);
     }
 
     private void setColorMode() {
