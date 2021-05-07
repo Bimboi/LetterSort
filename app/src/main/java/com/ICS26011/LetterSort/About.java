@@ -32,12 +32,9 @@ public class About extends AppCompatActivity {
 
         setColorMode();
 
-        String devDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at " +
-                "lacus purus. Sed nisi dolor, venenatis a leo sit amet, dapibus ultricies dui. " +
-                "Duis eget ex malesuada, sagittis odio id, vehicula risus. Morbi tincidunt mi in " +
-                "mattis vestibulum. Mauris enim arcu, fermentum efficitur tristique id, " +
-                "facilisis vel lectus. Pellentesque convallis lectus vel urna dictum, " +
-                "vitae rhoncus nibh scelerisque. Integer in quam lacus.";
+        String devDescription = "I’m Venz Dwight Kwan, a third year student BSIT in university of Santo Tomas Manila. " +
+                "I live in Bacoor, Cavite. I created this app for my 1st project in Applications Development And Emerging Technologies 3 (Mobile programming). " +
+                "To our beloved Professor Alma Perol thank you for sharing your knowledge to us your student we love you ma’am whahahahahaha";
         TextView desc = findViewById(R.id.dev_description);
         desc.setText(devDescription);
     }
@@ -47,6 +44,7 @@ public class About extends AppCompatActivity {
         TextView labelAboutDev = findViewById(R.id.dev_label);
         TextView author = findViewById(R.id.author_name);
         TextView desc = findViewById(R.id.dev_description);
+        TextView quote = findViewById(R.id.dev_quote);
 
         int colorSomewhatBlack = getResources().getColor(R.color.colorSomewhatBlack);
         int colorGray = getResources().getColor(R.color.colorGray);
@@ -63,12 +61,15 @@ public class About extends AppCompatActivity {
             author.setTextColor(colorWhite);
             // change color of author description
             desc.setTextColor(colorWhite);
+            // change color of quote
+            quote.setTextColor(colorWhite);
         } else if (Objects.equals(preferences.getString("mode", ""), "White")) {
             // same but white
             contentAbout.setBackgroundColor(colorWhite);
             labelAboutDev.setTextColor(colorGray);
             author.setTextColor(colorGray);
             desc.setTextColor(colorGray);
+            quote.setTextColor(colorGray);
         }
     }
 }
